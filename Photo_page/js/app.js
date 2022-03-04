@@ -41,12 +41,16 @@ function readTextFile(file)
     rawFile.open("GET", file, false);
     rawFile.onreadystatechange = function ()
     {
+    console.log(rawFile.readyState)
         if(rawFile.readyState === 4)
         {
             if(rawFile.status === 200 || rawFile.status == 0)
             {
                 var allText = rawFile.responseText;
-                alert(allText);
+                var SummDok = document.getElementById('desc'),
+                SummSumm= allText;
+                SummDok.innerHTML = SummSumm
+
             }
         }
     }
@@ -54,7 +58,7 @@ function readTextFile(file)
 }
 
 window.onload = function () {
-console.log(readTextFile('./text.txt'))
+console.log(readTextFile('http://localhost:63342/My_website/Photo_page/html/text.txt'))
 }
 
 
