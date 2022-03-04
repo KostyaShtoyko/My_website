@@ -117,7 +117,7 @@ ul{
     list-style: none;
     marin: 0;
 }
-a{
+.Button_year{
     font-size: 25px;
     padding: 15px;
     font-weight: 900;
@@ -128,12 +128,12 @@ a{
     transition:var(--transition);
 }
 
-a:hover{
+.Button_year:hover{
     font-size: 40px;
     transition:var(--transition);
     opacity: 1;
 }
-a:blur{
+.Button_year:blur{
     transition:var(--transition);
 }
 li{
